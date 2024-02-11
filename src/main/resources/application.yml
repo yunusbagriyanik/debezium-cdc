@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/"
+      database: test
+  kafka:
+    consumer:
+      address: localhost:9092
+      group-id: debezium-cdc
+      topic: insert
+    producer:
+      topic: insert
+server:
+  port: 8090
